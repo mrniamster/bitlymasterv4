@@ -17,7 +17,7 @@ $clicks="https://api-ssl.bitly.com/v4/bitlinks/bit.ly/$linkfile/clicks/summary?u
  echo $sub=$decode->total_clicks; // to go within a json {}
 // echo $sub;
     }
-    public function create($longurl){
+    public function shorturl($longurl){
      $tokenx=$this->token;
      $jsonlink=json_encode(["long_url"=>$longurl]);
      $ch=curl_init("https://api-ssl.bitly.com/v4/bitlinks");
@@ -36,5 +36,5 @@ $clicks="https://api-ssl.bitly.com/v4/bitlinks/bit.ly/$linkfile/clicks/summary?u
     // usage
 // $bitly=new Bitly('9be6f6a1f07bb880b475f49e07ea42e105bdbb07');
 // $bitly->getclicks('https://bit.ly/3iII1vg');
-//  $link= $bitly->create('https://us-files.hostinger.in/');
+//  $link= $bitly->shorturl('https://us-files.hostinger.in/');
 
